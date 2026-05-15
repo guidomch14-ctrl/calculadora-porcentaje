@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Porcentajes Online - Rápida y Gratuita</title>
+    
+    <title>Calculadora de Porcentajes Online - Sacar Porcentaje Rápido</title>
+    
+    <meta name="description" content="Calculadora de porcentajes online y gratuita. Aprende cómo sacar un porcentaje de un número, calcular descuentos de ropa y porcentaje de aumento paso a paso.">
+    <meta name="keywords" content="calculadora de porcentajes, como sacar un porcentaje, calcular porcentaje online, sacar porcentaje de un numero, calcular descuento, porcentaje de aumento, sacar el tanto por ciento">
+    <meta name="author" content="Calculadora Pro">
+    <meta name="robots" content="index, follow">
+
     <style>
         :root {
             --primary-color: #2563eb;
@@ -35,7 +42,7 @@
 
         h1 {
             color: #1e293b;
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             margin-bottom: 10px;
         }
 
@@ -44,13 +51,20 @@
             font-size: 1.1rem;
         }
 
-        /* Estilos de la calculadora */
+        /* Estilos de las tarjetas de cálculo */
         .calc-card {
             background: var(--card-bg);
             border-radius: 12px;
             padding: 24px;
             margin-bottom: 25px;
             box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+
+        .calc-card h3 {
+            margin-top: 0;
+            color: #1e293b;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
         }
 
         .calc-row {
@@ -85,7 +99,7 @@
             display: inline-block;
         }
 
-        /* Espacio para AdSense */
+        /* Bloques de anuncios automáticos de AdSense */
         .ads-placeholder {
             background: #f1f5f9;
             border: 2px dashed #cbd5e1;
@@ -97,7 +111,7 @@
             font-size: 0.9rem;
         }
 
-        /* Sección de Contenido SEO para Google */
+        /* Sección de Contenido de Calidad (SEO) */
         .seo-content {
             margin-top: 50px;
             background: var(--card-bg);
@@ -110,26 +124,53 @@
             color: #1e293b;
             border-bottom: 2px solid #f1f5f9;
             padding-bottom: 10px;
+            font-size: 1.6rem;
         }
 
         .seo-content h3 {
             color: #334155;
-            margin-top: 20px;
+            margin-top: 25px;
+            font-size: 1.3rem;
+        }
+
+        .seo-content ul {
+            padding-left: 20px;
+        }
+
+        .seo-content li {
+            margin-bottom: 8px;
         }
 
         footer {
             text-align: center;
             margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
             color: var(--text-light);
             font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 600px) {
             .calc-row {
                 flex-direction: column;
                 align-items: flex-start;
+                width: 100%;
             }
             input[type="number"] {
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .result-box {
                 width: 100%;
                 box-sizing: border-box;
             }
@@ -141,7 +182,7 @@
     <div class="container">
         <header>
             <h1>Calculadora de Porcentajes</h1>
-            <p class="subtitle">Saca cuentas matemáticas de forma instantánea y sin complicaciones.</p>
+            <p class="subtitle">Herramienta web inteligente para sacar un porcentaje rápido y de forma gratuita.</p>
         </header>
 
         <div class="ads-placeholder">
@@ -149,7 +190,7 @@
         </div>
 
         <div class="calc-card">
-            <h3>1. Calcular el porcentaje de un número</h3>
+            <h3>Calcular porcentaje de un número</h3>
             <div class="calc-row">
                 <span>¿Cuánto es el</span>
                 <input type="number" id="c1-p" placeholder="Ej. 15" oninput="calcularUno()">
@@ -162,7 +203,7 @@
         </div>
 
         <div class="calc-card">
-            <h3>2. Saber qué porcentaje representa una cantidad</h3>
+            <h3>Saber qué tanto por ciento representa una cantidad</h3>
             <div class="calc-row">
                 <span>El número</span>
                 <input type="number" id="c2-n1" placeholder="Ej. 30" oninput="calcularDos()">
@@ -175,7 +216,7 @@
         </div>
 
         <div class="calc-card">
-            <h3>3. Calcular aumento o descuento porcentual</h3>
+            <h3>Calcular porcentaje de aumento o descuento</h3>
             <div class="calc-row">
                 <span>Si un valor de</span>
                 <input type="number" id="c3-n1" placeholder="Ej. 100" oninput="calcularTres()">
@@ -191,25 +232,32 @@
         </div>
 
         <section class="seo-content">
-            <h2>¿Cómo calcular porcentajes a mano? Guía Paso a Paso</h2>
-            <p>El porcentaje es una de las herramientas matemáticas más utilizadas en nuestra vida cotidiana. Lo vemos al ir de compras con los descuentos, al calcular los impuestos de una factura o al evaluar el rendimiento de una inversión financiera. Aunque nuestra herramienta online lo hace al instante, entender la fórmula te ayudará a agilizar tu mente.</p>
+            <h2>¿Cómo calcular porcentaje online? Guía Paso a Paso</h2>
+            <p>El tanto por ciento es una de las herramientas matemáticas más utilizadas en nuestro día a día. Ya sea que necesites <strong>calcular un descuento</strong> en temporada de rebajas, estimar el <strong>porcentaje de aumento</strong> de un servicio debido a la inflación, o simplemente entender facturas e impuestos, saber <strong>cómo sacar un porcentaje</strong> te ahorrará tiempo y dinero.</p>
 
-            <h3>Fórmula para hallar el porcentaje de una cantidad</h3>
-            <p>Para descubrir cuánto representa un porcentaje específico de un número, la regla matemática es simple: multiplicas la cantidad inicial por el porcentaje que deseas obtener, y luego divides el resultado entre 100.</p>
-            <p><strong>Ejemplo práctico:</strong> Si quieres saber cuánto es el 15% de 200, la operación sería: <br>
-            <code>(200 x 15) / 100 = 3000 / 100 = 30</code>. <br>Por lo tanto, el 15% de 200 es 30.</p>
+            <p>Pensando en tu comodidad, hemos desarrollado esta <strong>calculadora de porcentajes</strong> interactiva para que puedas resolver estas operaciones de forma instantánea desde tu teléfono móvil o computadora, completamente gratis y sin registros.</p>
 
-            <h3>Cómo calcular aumentos y descuentos</h3>
-            <p>Cuando estamos en temporadas de rebajas o cuando un producto sube de precio por la inflación, aplicamos variaciones porcentuales:</p>
+            <h3>Fórmula matemática para sacar porcentaje de un número</h3>
+            <p>Si deseas realizar la operación a mano de manera tradicional, la regla básica consiste en multiplicar la cifra inicial por el porcentaje que buscas y, posteriormente, dividir el resultado obtenido entre 100.</p>
+            <p><strong>Ejemplo de uso cotidiano:</strong> Supongamos que deseas saber cuánto es el 15% de 200 euros o dólares. La ecuación se plantea de la siguiente manera: <br>
+            <code>(200 x 15) / 100 = 3000 / 100 = 30</code>. <br>De este modo, se determina que el quince por ciento de doscientos equivale a treinta.</p>
+
+            <h3>Aplicación práctica: Calcular descuentos y variaciones porcentuales</h3>
+            <p>Nuestra aplicación no solo te ayuda a extraer fracciones, también cuenta con funciones avanzadas para medir variaciones financieras o comerciales:</p>
             <ul>
-                <li><strong>Para un descuento:</strong> Calculas el porcentaje de descuento utilizando el método anterior y se lo restas al precio original.</li>
-                <li><strong>Para un aumento o interés:</strong> Calculas el porcentaje correspondiente y se lo sumas al valor inicial.</li>
+                <li><strong>Calcular descuento comercial:</strong> Si una prenda cuesta originalmente 80 y tiene una rebaja del 20%, nuestra utilidad te indicará la cantidad exacta de dinero que te estás ahorrando para que conozcas el precio final antes de pagar en caja.</li>
+                <li><strong>Porcentaje de aumento o incremento:</strong> Ideal para medir el crecimiento de tus métricas web, reajustes salariales o incrementos en las facturas del hogar. Introduce el valor antiguo junto al valor nuevo y obtendrás la tasa de variación exacta al segundo.</li>
             </ul>
-            <p>Nuestra calculadora gratuita está diseñada para ahorrarte estos pasos intermedios. Es completamente responsive, lo que significa que puedes usarla desde tu teléfono móvil, tablet u ordenador de forma cómoda y sin descargar ninguna aplicación.</p>
+            <p>Gracias a que esta utilidad funciona bajo código optimizado, no consume datos adicionales de tu plan de internet y se adapta perfectamente a pantallas móviles. ¡Disfruta de la mejor alternativa para <strong>calcular porcentaje online</strong>!</p>
         </section>
 
         <footer>
-            <p>&copy; 2026 Calculadora de Porcentajes Pro. Todos los derechos reservados. Contenido totalmente legal.</p>
+            <p>&copy; 2026 Calculadora de Porcentajes Pro. Todos los derechos reservados.</p>
+            <p>
+                <a href="politica-privacidad.html">Privacidad y Cookies</a> | 
+                <a href="terminos.html">Términos de Uso</a> | 
+                <a href="contacto.html">Sobre Nosotros y Contacto</a>
+            </p>
         </footer>
     </div>
 
@@ -253,259 +301,4 @@
         }
     </script>
 </body>
-  </html><!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Porcentajes Online - Rápida y Gratuita</title>
-    <style>
-        :root {
-            --primary-color: #2563eb;
-            --primary-hover: #1d4ed8;
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --text-color: #334155;
-            --text-light: #64748b;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        h1 {
-            color: #1e293b;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            color: var(--text-light);
-            font-size: 1.1rem;
-        }
-
-        /* Estilos de la calculadora */
-        .calc-card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-        }
-
-        .calc-row {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        input[type="number"] {
-            padding: 10px;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
-            font-size: 1rem;
-            width: 100px;
-            transition: border-color 0.2s;
-        }
-
-        input[type="number"]:focus {
-            outline: none;
-            border-color: var(--primary-color);
-        }
-
-        .result-box {
-            font-weight: bold;
-            color: var(--primary-color);
-            background: #eff6ff;
-            padding: 10px 15px;
-            border-radius: 8px;
-            min-width: 80px;
-            text-align: center;
-            display: inline-block;
-        }
-
-        /* Espacio para AdSense */
-        .ads-placeholder {
-            background: #f1f5f9;
-            border: 2px dashed #cbd5e1;
-            padding: 20px;
-            text-align: center;
-            color: var(--text-light);
-            margin: 30px 0;
-            border-radius: 8px;
-            font-size: 0.9rem;
-        }
-
-        /* Sección de Contenido SEO para Google */
-        .seo-content {
-            margin-top: 50px;
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
-        }
-
-        .seo-content h2 {
-            color: #1e293b;
-            border-bottom: 2px solid #f1f5f9;
-            padding-bottom: 10px;
-        }
-
-        .seo-content h3 {
-            color: #334155;
-            margin-top: 20px;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 600px) {
-            .calc-row {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            input[type="number"] {
-                width: 100%;
-                box-sizing: border-box;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <header>
-            <h1>Calculadora de Porcentajes</h1>
-            <p class="subtitle">Saca cuentas matemáticas de forma instantánea y sin complicaciones.</p>
-        </header>
-
-        <div class="ads-placeholder">
-            [Espacio reservado para Anuncio de AdSense]
-        </div>
-
-        <div class="calc-card">
-            <h3>1. Calcular el porcentaje de un número</h3>
-            <div class="calc-row">
-                <span>¿Cuánto es el</span>
-                <input type="number" id="c1-p" placeholder="Ej. 15" oninput="calcularUno()">
-                <span>% de</span>
-                <input type="number" id="c1-n" placeholder="Ej. 200" oninput="calcularUno()">
-                <span>?</span>
-                <span>Resultado:</span>
-                <span class="result-box" id="c1-res">0</span>
-            </div>
-        </div>
-
-        <div class="calc-card">
-            <h3>2. Saber qué porcentaje representa una cantidad</h3>
-            <div class="calc-row">
-                <span>El número</span>
-                <input type="number" id="c2-n1" placeholder="Ej. 30" oninput="calcularDos()">
-                <span>¿qué porcentaje es de</span>
-                <input type="number" id="c2-n2" placeholder="Ej. 150" oninput="calcularDos()">
-                <span>?</span>
-                <span>Resultado:</span>
-                <span class="result-box" id="c2-res">0%</span>
-            </div>
-        </div>
-
-        <div class="calc-card">
-            <h3>3. Calcular aumento o descuento porcentual</h3>
-            <div class="calc-row">
-                <span>Si un valor de</span>
-                <input type="number" id="c3-n1" placeholder="Ej. 100" oninput="calcularTres()">
-                <span>cambia a</span>
-                <input type="number" id="c3-n2" placeholder="Ej. 120" oninput="calcularTres()">
-                <span>¿cuál es el porcentaje de cambio?</span>
-                <span class="result-box" id="c3-res">0%</span>
-            </div>
-        </div>
-
-        <div class="ads-placeholder">
-            [Espacio reservado para Anuncio de AdSense]
-        </div>
-
-        <section class="seo-content">
-            <h2>¿Cómo calcular porcentajes a mano? Guía Paso a Paso</h2>
-            <p>El porcentaje es una de las herramientas matemáticas más utilizadas en nuestra vida cotidiana. Lo vemos al ir de compras con los descuentos, al calcular los impuestos de una factura o al evaluar el rendimiento de una inversión financiera. Aunque nuestra herramienta online lo hace al instante, entender la fórmula te ayudará a agilizar tu mente.</p>
-
-            <h3>Fórmula para hallar el porcentaje de una cantidad</h3>
-            <p>Para descubrir cuánto representa un porcentaje específico de un número, la regla matemática es simple: multiplicas la cantidad inicial por el porcentaje que deseas obtener, y luego divides el resultado entre 100.</p>
-            <p><strong>Ejemplo práctico:</strong> Si quieres saber cuánto es el 15% de 200, la operación sería: <br>
-            <code>(200 x 15) / 100 = 3000 / 100 = 30</code>. <br>Por lo tanto, el 15% de 200 es 30.</p>
-
-            <h3>Cómo calcular aumentos y descuentos</h3>
-            <p>Cuando estamos en temporadas de rebajas o cuando un producto sube de precio por la inflación, aplicamos variaciones porcentuales:</p>
-            <ul>
-                <li><strong>Para un descuento:</strong> Calculas el porcentaje de descuento utilizando el método anterior y se lo restas al precio original.</li>
-                <li><strong>Para un aumento o interés:</strong> Calculas el porcentaje correspondiente y se lo sumas al valor inicial.</li>
-            </ul>
-            <p>Nuestra calculadora gratuita está diseñada para ahorrarte estos pasos intermedios. Es completamente responsive, lo que significa que puedes usarla desde tu teléfono móvil, tablet u ordenador de forma cómoda y sin descargar ninguna aplicación.</p>
-        </section>
-
-        <footer>
-            <p>&copy; 2026 Calculadora de Porcentajes Pro. Todos los derechos reservados. Contenido totalmente legal.</p>
-        </footer>
-    </div>
-
-    <script>
-        function calcularUno() {
-            const p = parseFloat(document.getElementById('c1-p').value);
-            const n = parseFloat(document.getElementById('c1-n').value);
-            const res = document.getElementById('c1-res');
-            
-            if (!isNaN(p) && !isNaN(n)) {
-                res.innerText = ((p * n) / 100).toFixed(2).replace('.00', '');
-            } else {
-                res.innerText = '0';
-            }
-        }
-
-        function calcularDos() {
-            const n1 = parseFloat(document.getElementById('c2-n1').value);
-            const n2 = parseFloat(document.getElementById('c2-n2').value);
-            const res = document.getElementById('c2-res');
-            
-            if (!isNaN(n1) && !isNaN(n2) && n2 !== 0) {
-                res.innerText = ((n1 / n2) * 100).toFixed(2).replace('.00', '') + '%';
-            } else {
-                res.innerText = '0%';
-            }
-        }
-
-        function calcularTres() {
-            const n1 = parseFloat(document.getElementById('c3-n1').value);
-            const n2 = parseFloat(document.getElementById('c3-n2').value);
-            const res = document.getElementById('c3-res');
-            
-            if (!isNaN(n1) && !isNaN(n2) && n1 !== 0) {
-                const cambio = ((n2 - n1) / n1) * 100;
-                const signo = cambio > 0 ? '+' : '';
-                res.innerText = signo + cambio.toFixed(2).replace('.00', '') + '%';
-            } else {
-                res.innerText = '0%';
-            }
-        }
-    </script>
-</body>
-  </html>
+    </html>
