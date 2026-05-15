@@ -13,7 +13,19 @@
       <priority>0.3</priority>
    </url>
    <url>
+      <loc>https://calculadora-porcentaje.vercel.app/cookies.html</loc>
+      <lastmod>2026-05-15</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.3</priority>
+   </url>
+   <url>
       <loc>https://calculadora-porcentaje.vercel.app/terminos.html</loc>
+      <lastmod>2026-05-15</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.3</priority>
+   </url>
+   <url>
+      <loc>https://calculadora-porcentaje.vercel.app/sobre-nosotros.html</loc>
       <lastmod>2026-05-15</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.3</priority>
@@ -22,6 +34,6 @@
       <loc>https://calculadora-porcentaje.vercel.app/contacto.html</loc>
       <lastmod>2026-05-15</lastmod>
       <changefreq>monthly</changefreq>
-      <priority>0.4</priority>
+      <priority>0.3</priority>
    </url>
 </urlset>
