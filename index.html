@@ -12,19 +12,18 @@
     <meta name="robots" content="index, follow">
 
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Calculadora de Porcentajes Online",
-  "operatingSystem": "All",
-  "applicationCategory": "BusinessApplication",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  }
-}
-    
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Calculadora de Porcentajes Online",
+      "operatingSystem": "All",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
     </script>
 
     <style>
@@ -35,6 +34,7 @@
             --card-bg: #ffffff;
             --text-color: #334155;
             --text-light: #64748b;
+            --success-color: #16a34a;
         }
 
         body {
@@ -67,7 +67,6 @@
             font-size: 1.1rem;
         }
 
-        /* Estilos de las tarjetas de cálculo */
         .calc-card {
             background: var(--card-bg);
             border-radius: 12px;
@@ -104,6 +103,12 @@
             border-color: var(--primary-color);
         }
 
+        .result-container {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
         .result-box {
             font-weight: bold;
             color: var(--primary-color);
@@ -115,7 +120,21 @@
             display: inline-block;
         }
 
-        /* Bloques de anuncios automáticos de AdSense */
+        /* Botón de copiar interactivo */
+        .copy-btn {
+            background: #f1f5f9;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        
+        .copy-btn:hover {
+            background: #e2e8f0;
+        }
+
         .ads-placeholder {
             background: #f1f5f9;
             border: 2px dashed #cbd5e1;
@@ -127,7 +146,6 @@
             font-size: 0.9rem;
         }
 
-        /* Sección de Contenido de Calidad (SEO) */
         .seo-content {
             margin-top: 50px;
             background: var(--card-bg);
@@ -149,12 +167,18 @@
             font-size: 1.3rem;
         }
 
-        .seo-content ul {
-            padding-left: 20px;
+        .faq-block {
+            margin-top: 15px;
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
         }
 
-        .seo-content li {
-            margin-bottom: 8px;
+        .faq-block strong {
+            color: #1e293b;
+            display: block;
+            margin-bottom: 5px;
         }
 
         footer {
@@ -163,13 +187,13 @@
             padding-top: 20px;
             border-top: 1px solid #e2e8f0;
             color: var(--text-light);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         footer a {
             color: var(--primary-color);
             text-decoration: none;
-            margin: 0 8px;
+            margin: 0 5px;
         }
 
         footer a:hover {
@@ -182,11 +206,7 @@
                 align-items: flex-start;
                 width: 100%;
             }
-            input[type="number"] {
-                width: 100%;
-                box-sizing: border-box;
-            }
-            .result-box {
+            input[type="number"], .result-container, .result-box {
                 width: 100%;
                 box-sizing: border-box;
             }
@@ -201,6 +221,10 @@
             <p class="subtitle">Herramienta web inteligente para sacar un porcentaje rápido y de forma gratuita.</p>
         </header>
 
+        <div class="ads-placeholder">
+            [Espacio reservado para Anuncio de AdSense]
+        </div>
+
         <div class="calc-card">
             <h3>Calcular porcentaje de un número</h3>
             <div class="calc-row">
@@ -210,7 +234,10 @@
                 <input type="number" id="c1-n" placeholder="Ej. 200" oninput="calcularUno()">
                 <span>?</span>
                 <span>Resultado:</span>
-                <span class="result-box" id="c1-res">0</span>
+                <div class="result-container">
+                    <span class="result-box" id="c1-res">0</span>
+                    <button class="copy-btn" onclick="copiarTexto('c1-res')">📋</button>
+                </div>
             </div>
         </div>
 
@@ -223,7 +250,10 @@
                 <input type="number" id="c2-n2" placeholder="Ej. 150" oninput="calcularDos()">
                 <span>?</span>
                 <span>Resultado:</span>
-                <span class="result-box" id="c2-res">0%</span>
+                <div class="result-container">
+                    <span class="result-box" id="c2-res">0%</span>
+                    <button class="copy-btn" onclick="copiarTexto('c2-res')">📋</button>
+                </div>
             </div>
         </div>
 
@@ -235,14 +265,20 @@
                 <span>cambia a</span>
                 <input type="number" id="c3-n2" placeholder="Ej. 120" oninput="calcularTres()">
                 <span>¿cuál es el porcentaje de cambio?</span>
-                <span class="result-box" id="c3-res">0%</span>
+                <div class="result-container">
+                    <span class="result-box" id="c3-res">0%</span>
+                    <button class="copy-btn" onclick="copiarTexto('c3-res')">📋</button>
+                </div>
             </div>
+        </div>
+
+        <div class="ads-placeholder">
+            [Espacio reservado para Anuncio de AdSense]
         </div>
 
         <section class="seo-content">
             <h2>¿Cómo calcular porcentaje online? Guía Paso a Paso</h2>
             <p>El tanto por ciento es una de las herramientas matemáticas más utilizadas en nuestro día a día. Ya sea que necesites <strong>calcular un descuento</strong> en temporada de rebajas, estimar el <strong>porcentaje de aumento</strong> de un servicio debido a la inflación, o simplemente entender facturas e impuestos, saber <strong>cómo sacar un porcentaje</strong> te ahorrará tiempo y dinero.</p>
-
             <p>Pensando en tu comodidad, hemos desarrollado esta <strong>calculadora de porcentajes</strong> interactiva para que puedas resolver estas operaciones de forma instantánea desde tu teléfono móvil o computadora, completamente gratis y sin registros.</p>
 
             <h3>Fórmula matemática para sacar porcentaje de un número</h3>
@@ -256,29 +292,33 @@
                 <li><strong>Calcular descuento comercial:</strong> Si una prenda cuesta originalmente 80 y tiene una rebaja del 20%, nuestra utilidad te indicará la cantidad exacta de dinero que te estás ahorrando para que conozcas el precio final antes de pagar en caja.</li>
                 <li><strong>Porcentaje de aumento o incremento:</strong> Ideal para medir el crecimiento de tus métricas web, reajustes salariales o incrementos en las facturas del hogar. Introduce el valor antiguo junto al valor nuevo y obtendrás la tasa de variación exacta al segundo.</li>
             </ul>
-            <p>Gracias a que esta utilidad funciona bajo código optimizado, no consume datos adicionales de tu plan de internet y se adapta perfectamente a pantallas móviles. ¡Disfruta de la mejor alternativa para <strong>calcular porcentaje online</strong>!</p>
-        
-        <h3>Preguntas Frecuentes sobre el cálculo de porcentajes</h3>
-<p><strong>¿Cómo sacar el 20% de una cantidad?</strong><br>
-Multiplica el número por 20 y luego divídelo entre 100. Por ejemplo, el 20% de 500 es (500 x 20) / 100 = 100.</p>
 
-<p><strong>¿Qué es el porcentaje y para qué sirve?</strong><br>
-El porcentaje es una forma de expresar un número como una fracción de 100. Se utiliza para comparar cantidades, calcular tasas de interés, descuentos comerciales e impuestos de forma estandarizada.</p>
+            <h3>Preguntas Frecuentes sobre el cálculo de porcentajes</h3>
+            <div class="faq-block">
+                <strong>¿Cómo sacar el 20% de una cantidad?</strong>
+                <p>Multiplica el número por 20 y luego divídelo entre 100. Por ejemplo, el 20% de 500 es (500 x 20) / 100 = 100.</p>
+            </div>
+            <div class="faq-block">
+                <strong>¿Qué es el porcentaje y para qué sirve?</strong>
+                <p>El porcentaje es una forma de expresar un número como una fracción de 100. Se utiliza para comparar cantidades, calcular tasas de interés, descuentos comerciales e impuestos de forma estandarizada.</p>
+            </div>
+            <div class="faq-block">
+                <strong>¿Cómo calcular un descuento del 15%?</strong>
+                <p>Si un producto cuesta 100, el 15% es 15. Restas esa cantidad al precio original (100 - 15) y el precio final rebajado será 85.</p>
+            </div>
 
-<p><strong>¿Cómo calcular un descuento del 15%?</strong><br>
-Si un producto cuesta 100, el 15% es 15. Restas esa cantidad al precio original (100 - 15) y el precio final rebajado será 85.</p>
-        
+            <p style="margin-top:20px;">Gracias a que esta utilidad funciona bajo código optimizado, no consume datos adicionales de tu plan de internet y se adapta perfectamente a pantallas móviles. ¡Disfruta de la mejor alternativa para <strong>calcular porcentaje online</strong>!</p>
         </section>
 
         <footer>
             <p>&copy; 2026 Calculadora de Porcentajes Pro. Todos los derechos reservados.</p>
-           <p>
+            <p>
                 <a href="politica-privacidad.html">Privacidad</a> | 
                 <a href="cookies.html">Cookies</a> | 
                 <a href="terminos.html">Términos de Uso</a> | 
                 <a href="sobre-nosotros.html">Sobre Nosotros</a> | 
                 <a href="contacto.html">Contacto</a>
-          </p>
+            </p>
         </footer>
     </div>
 
@@ -287,39 +327,34 @@ Si un producto cuesta 100, el 15% es 15. Restas esa cantidad al precio original 
             const p = parseFloat(document.getElementById('c1-p').value);
             const n = parseFloat(document.getElementById('c1-n').value);
             const res = document.getElementById('c1-res');
-            
-            if (!isNaN(p) && !isNaN(n)) {
-                res.innerText = ((p * n) / 100).toFixed(2).replace('.00', '');
-            } else {
-                res.innerText = '0';
-            }
+            if (!isNaN(p) && !isNaN(n)) { res.innerText = ((p * n) / 100).toFixed(2).replace('.00', ''); } else { res.innerText = '0'; }
         }
-
         function calcularDos() {
             const n1 = parseFloat(document.getElementById('c2-n1').value);
             const n2 = parseFloat(document.getElementById('c2-n2').value);
             const res = document.getElementById('c2-res');
-            
-            if (!isNaN(n1) && !isNaN(n2) && n2 !== 0) {
-                res.innerText = ((n1 / n2) * 100).toFixed(2).replace('.00', '') + '%';
-            } else {
-                res.innerText = '0%';
-            }
+            if (!isNaN(n1) && !isNaN(n2) && n2 !== 0) { res.innerText = ((n1 / n2) * 100).toFixed(2).replace('.00', '') + '%'; } else { res.innerText = '0%'; }
         }
-
         function calcularTres() {
             const n1 = parseFloat(document.getElementById('c3-n1').value);
             const n2 = parseFloat(document.getElementById('c3-n2').value);
             const res = document.getElementById('c3-res');
-            
             if (!isNaN(n1) && !isNaN(n2) && n1 !== 0) {
                 const cambio = ((n2 - n1) / n1) * 100;
                 const signo = cambio > 0 ? '+' : '';
                 res.innerText = signo + cambio.toFixed(2).replace('.00', '') + '%';
-            } else {
-                res.innerText = '0%';
-            }
+            } else { res.innerText = '0%'; }
+        }
+
+        // 3. SCRIPT INTERACTIVO PARA COPIAR LOS RESULTADOS AL PORTAPAPELES
+        function copiarTexto(id) {
+            const texto = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(texto).then(() => {
+                alert("¡Resultado copiado al portapapeles!: " + texto);
+            }).catch(err => {
+                console.error('Error al copiar: ', err);
+            });
         }
     </script>
 </body>
-    </html>
+</html>
