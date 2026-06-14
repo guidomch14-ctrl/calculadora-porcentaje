@@ -1,4 +1,9 @@
 User-agent: *
-Allow: /
+Allow: /$
+Disallow: /politica-privacidad.html
+Disallow: /cookies.html
+Disallow: /terminos.html
+Disallow: /sobre-nosotros.html
+Disallow: /contacto.html
 
 Sitemap: https://calculadora-porcentaje.vercel.app/sitemap.xml
